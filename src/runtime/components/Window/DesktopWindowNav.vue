@@ -86,16 +86,6 @@ const dropdownItems = computed(() => [
         @click.stop="onWindowMinimize"
       />
       <UButton
-        v-if="windowController?.isMaximizable"
-        icon="i-heroicons-squares-2x2"
-        size="2xs"
-        color="gray"
-        variant="ghost"
-        class="h-5 w-5 p-0 flex items-center justify-center rounded"
-        @mousedown.stop
-        @click.stop="onWindowMaximize"
-      />
-      <UButton
         v-if="!windowController?.instanced || windowController?.isDestroyable"
         icon="i-heroicons-x-mark"
         size="2xs"
