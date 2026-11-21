@@ -45,9 +45,9 @@ const isDark = computed({
 </script>
 
 <template>
-  <header class="h-[60px] w-full flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-white/75 dark:bg-gray-900/75 backdrop-blur border-b border-gray-200 dark:border-gray-800 flex-shrink-0 select-none z-50">
+  <header class="h-[60px] w-full grid grid-cols-3 items-center px-4 sm:px-6 lg:px-8 bg-white/75 dark:bg-gray-900/75 backdrop-blur border-b border-gray-200 dark:border-gray-800 flex-shrink-0 select-none z-50">
     <!-- Left Section: Logo/Start Button -->
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 justify-self-start">
       <button 
         @click="toggleStart"
         class="flex items-center gap-2 hover:opacity-80 transition-opacity"
@@ -65,7 +65,7 @@ const isDark = computed({
     </div>
 
     <!-- Right Section: Quick controls -->
-    <div class="flex items-center gap-3">
+    <div class="flex items-center gap-3 justify-self-end">
       <UButton
         :icon="isDark ? 'i-heroicons-moon' : 'i-heroicons-sun'"
         color="gray"
