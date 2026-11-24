@@ -47,7 +47,7 @@ const dropdownItems = computed(() => [
     class="flex items-center justify-between px-3 py-1.5 bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 select-none cursor-default"
     @dblclick="onWindowMaximize"
   >
-    <div class="flex items-center space-x-2 min-w-0">
+    <div class="desktop-window-nav__interactive flex items-center space-x-2 min-w-0">
       <UDropdown :items="dropdownItems" :popper="{ placement: 'bottom-start' }">
         <UButton
           v-if="windowController?.icon"
@@ -69,12 +69,12 @@ const dropdownItems = computed(() => [
 
       <div
         v-if="windowController?.title"
-        class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate"
+        class="text-xs font-semibold text-gray-700 dark:text-gray-300 truncate pointer-events-none"
         v-text="windowController?.title"
       />
     </div>
 
-    <div class="flex items-center space-x-1 flex-shrink-0">
+    <div class="desktop-window-nav__btn-group flex items-center space-x-1 flex-shrink-0">
       <UButton
         v-if="!windowController?.instanced || windowController?.isMinimizable"
         icon="i-heroicons-minus"
